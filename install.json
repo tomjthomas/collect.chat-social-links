@@ -1,34 +1,137 @@
 {
-  "resources": {
-    "body": [
-      { "type": "script", "src": "./src/app.js" },
-      { "type": "style", "src": "./src/style.css" }
-    ]
-  },
-  "options": {
-    "properties": {
-      "icon": {
-        "title": "Icon",
-        "description": "The icon for your widget",
-        "order": 0,
-        "type": "string",
-        "format": "image",
-        "default": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.iconfinder.com%2Fdata%2Ficons%2Ftransparent-round-icons%2F512%2Fchat.png&f=1&nofb=1"
-      },
-      "location": {
-        "title": "Location",
-        "description": "Where do you want the widget to appear?",
-        "type": "string",
-        "format": "radios",
-        "enum": ["bottom-right", "bottom-left", "center"],
-        "default": "bottom-right",
-        "enumNames": {
-          "bottom-right": "Bottom Right",
-          "bottom-left": "Bottom Left",
-          "center": "Center"
-        },
-        "order": 1
-      }
-    }
-  }
+	"resources": {
+		"body": [
+			{ "type": "script", "src": "./src/app.js" },
+			{ "type": "style", "src": "./src/style.css" }
+		]
+	},
+	"options": {
+		"properties": {
+			"icon": {
+				"title": "Icon",
+				"description": "The icon for your widget",
+				"order": 0,
+				"type": "string",
+				"format": "image",
+				"default": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.iconfinder.com%2Fdata%2Ficons%2Ftransparent-round-icons%2F512%2Fchat.png&f=1&nofb=1"
+			},
+			"location": {
+				"title": "Location",
+				"description": "Where do you want the widget to appear?",
+				"type": "string",
+				"format": "radios",
+				"enum": ["bottom-right", "bottom-left", "center"],
+				"default": "bottom-right",
+				"enumNames": {
+					"bottom-right": "Bottom Right",
+					"bottom-left": "Bottom Left",
+					"center": "Center"
+				},
+				"order": 1
+			},
+			"links": {
+				"title": "Widget Content",
+				"description": "Customize what you want in the widget",
+				"type": "object",
+				"properties": {
+					"message": {
+						"title": "Message",
+						"description": "A message dispayed in the widget",
+						"type": "object",
+						"order": 1,
+						"properties": {
+							"show": {
+								"order": 1,
+								"type": "boolean",
+								"title": "Show",
+								"default": false
+							},
+							"msgtitle": {
+								"showIf": {
+									"links.message.show": true
+								},
+								"order": 2,
+								"title": "Message Title",
+								"type": "string"
+							},
+							"msgtext": {
+								"showIf": {
+									"links.message.show": true
+								},
+								"order": 3,
+								"title": "Message Text",
+								"type": "string",
+								"format": "textarea"
+							}
+						}
+					},
+					"email": {
+						"title": "E-mail",
+						"type": "object",
+						"order": 2,
+						"properties": {
+							"show": {
+								"order": 1,
+								"type": "boolean",
+								"title": "Show",
+								"default": false
+							},
+							"link": {
+								"showIf": {
+									"links.email.show": true
+								},
+								"order": 2,
+								"title": "E-mail ID",
+								"type": "string",
+								"format": "email"
+							}
+						}
+					},
+					"phone": {
+						"title": "Phone",
+						"type": "object",
+						"order": 3,
+						"properties": {
+							"show": {
+								"order": 1,
+								"type": "boolean",
+								"title": "Show",
+								"default": false
+							},
+							"link": {
+								"showIf": {
+									"links.phone.show": true
+								},
+								"order": 2,
+								"title": "Phone Number",
+								"type": "integer"
+							}
+						}
+					},
+					"facebook": {
+						"title": "Facebook",
+						"type": "object",
+						"order": 4,
+						"properties": {
+							"show": {
+								"order": 1,
+								"type": "boolean",
+								"title": "Show",
+								"default": false
+							},
+							"link": {
+								"showIf": {
+									"links.facebook.show": true
+								},
+								"order": 2,
+								"title": "Facebook ID",
+								"description": "As in facebook.com/<strong>username</strong>",
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

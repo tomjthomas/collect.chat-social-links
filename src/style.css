@@ -1,46 +1,99 @@
+* {
+	margin: 0;
+	padding: 0;
+}
 .widget-button {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  background-size: contain;
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+	border-radius: 50%;
+	font-size: 30px;
 }
 
 .widget {
-  background-color: white;
-  height: 75%;
-  width: 377px;
-  position: fixed;
-  border-radius: 8px;
-  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16) !important;
+	background-color: white;
+	box-sizing: border-box;
+	padding: 25px;
+	height: auto;
+	width: auto;
+	position: fixed;
+	border-radius: 8px;
+	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16) !important;
 }
 
 .widget-button.bottom-right {
-  right: 20px;
-  bottom: 20px;
+	right: 20px;
+	bottom: 20px;
 }
 .widget.bottom-right {
-  right: 20px;
-  bottom: 90px;
+	right: 20px;
+	bottom: 90px;
 }
 
 .widget-button.bottom-left {
-  left: 20px;
-  bottom: 20px;
+	left: 20px;
+	bottom: 20px;
 }
 
 .widget.bottom-left {
-  left: 20px;
-  bottom: 90px;
+	left: 20px;
+	bottom: 90px;
 }
 
 .widget-button.center {
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
 }
 
 .widget.center {
-  top: 50%;
-  right: 90px;
-  transform: translateY(-50%);
+	top: 50%;
+	right: 90px;
+	transform: translateY(-50%);
+}
+
+.section-heading {
+	margin-bottom: 12.5px;
+}
+
+.section {
+	padding: 6.5px;
+	border-top: 1px solid #ccc;
+}
+
+.info {
+	padding: 6px;
+	display: flex;
+	flex-direction: row;
+}
+
+.info-icon-div {
+	margin-right: 12px;
+}
+
+.icons {
+	font-size: 18pt;
+	line-height: 40px;
+}
+
+.info-heading,
+.section-heading {
+	line-height: 20px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	font-size: 14.5px;
+}
+
+.info-text {
+	font-family: "Montserrat", sans-serif;
+	line-height: 20px;
+	font-weight: 300;
+	font-size: 12px;
+	color: #455a64;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
 }
