@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap");
+
+#social-links-widget *,
+#social-links-widgetButton * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.widget-button {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background-size: cover;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+.widget {
+  display: none;
+  background-color: white;
+  box-sizing: border-box;
+  height: auto;
+  width: auto;
+  min-width: 250px;
+  max-height: 75%;
+  overflow-y: auto;
+  position: fixed;
+  border-radius: 8px;
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16) !important;
+  font-family: "Open Sans", sans-serif;
+  padding: 12px 0px;
+}
+
+.widget-button.bottom-right {
+  right: 20px;
+  bottom: 20px;
+}
+.widget.bottom-right {
+  right: 20px;
+  bottom: 90px;
+}
+
+.widget-button.bottom-left {
+  left: 20px;
+  bottom: 20px;
+}
+
+.widget.bottom-left {
+  left: 20px;
+  bottom: 90px;
+}
+
+.widget-button.center {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.widget.center {
+  top: 50%;
+  right: 90px;
+  transform: translateY(-50%);
+}
+
+#social-links-widget .section-heading {
+  margin: 12px;
+  margin-top: 0px;
+}
+
+#social-links-widget .section {
+  padding: 12px;
+  border-top: 1px solid #ccc;
+}
+
+#social-links-widget .info {
+  display: flex;
+  flex-direction: row;
+}
+
+#social-links-widget .info-icon-div {
+  margin-right: 12px;
+}
+
+#social-links-widget .icons {
+  font-size: 18pt;
+  width: 28px;
+  height: 28px;
+  margin: 5px 0px;
+  background-size: contain;
+}
+
+#social-links-widget .info-heading,
+#social-links-widget .section-heading {
+  line-height: 20px;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+#social-links-widget .info-text {
+  line-height: 18px;
+  font-weight: 600;
+  font-size: 10px;
+  color: #929ca0;
+}
+
+#social-links-widget a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#social-links-widgetButton svg {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
